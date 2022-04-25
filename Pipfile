@@ -8,6 +8,8 @@ pandas = "*"
 nltk = "*"
 vadersentiment = "*"
 gensim = "*"
+flask = "*"
+gunicorn = "*"
 
 [dev-packages]
 
