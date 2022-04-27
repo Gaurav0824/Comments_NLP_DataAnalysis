@@ -7,27 +7,12 @@ import json
 from flask import Flask, url_for, request
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from flask import jsonify
-from sklearn import metrics
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import precision_score, recall_score, plot_confusion_matrix, classification_report, accuracy_score, f1_score
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder
-from sklearn.svm import SVC
 import gensim
 from gensim.utils import simple_preprocess
 import gensim.corpora as corpora
-from pprint import *
-
-with open('model.pkl', 'rb') as file:
-    vect, clf = pickle.load(file)
+import pprint
+ 
+vect, clf = pickle.load(open('model.pkl', 'rb'))
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -197,7 +182,7 @@ def topics():
                                                  id2word=id2word,
                                                  num_topics=num_topics)
 
-        topics = pformat(lda_model20.show_topics())
+        topics = pprint.pformat(lda_model20.show_topics())
 
         print(topics)
         return topics
