@@ -8,17 +8,6 @@ cffi==1.15.0
 chardet==3.0.4
 charset-normalizer==2.0.12
 click==8.1.2
-colorama==0.4.3
-command-not-found==0.3
-coverage==6.3.2
-cryptography==36.0.2
-cupshelpers==1.0
-dbus-python==1.2.16
-defer==1.0.6
-distlib==0.3.4
-distro==1.4.0
-distro-info===0.23ubuntu1
-entrypoints==0.3
 filelock==3.6.0
 Flask==2.1.1
 Flask-Bcrypt==1.0.1
