@@ -18,7 +18,7 @@ flask-restplus~=0.13.0
 Flask-Script==2.0.5
 Flask-SQLAlchemy==2.4.0
 Flask-Testing==0.8.1
-Flask-User===.0.1.5
+Flask-User===1.0.1.5
 Flask-WTF==0.14.2
 gensim~=4.1.2
 greenlet~=1.1.2
