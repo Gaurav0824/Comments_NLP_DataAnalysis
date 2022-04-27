@@ -59,3 +59,4 @@ vaderSentiment==3.3.2
 Werkzeug==2.1.1
 WTForms==3.0.1
 zipp==3.8.0
+scikit-learn==1.0.2
