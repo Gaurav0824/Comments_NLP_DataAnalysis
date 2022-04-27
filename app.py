@@ -11,7 +11,10 @@ import gensim
 from gensim.utils import simple_preprocess
 import gensim.corpora as corpora
 import pprint
- 
+import sklearn
+from sklearn.naive_bayes import *
+from sklearn.feature_extraction.text import *
+
 vect, clf = pickle.load(open('model.pkl', 'rb'))
 
 from nltk.corpus import stopwords
