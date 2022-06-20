@@ -1,3 +1,4 @@
+import imp
 import pickle
 import re
 import string
@@ -14,6 +15,12 @@ import pprint
 import sklearn
 from sklearn.naive_bayes import *
 from sklearn.feature_extraction.text import *
+from flask_cors import *
+import io
+import base64
+
+from wordcloud import STOPWORDS, WordCloud
+
 
 vect, clf = pickle.load(open('model.pkl', 'rb'))
 
@@ -26,7 +33,29 @@ nltk.download('punkt')
 nltk.download('wordnet')
 
 app = Flask(__name__)
+CORS(app)
 
+@app.route('/wordcloud', methods=['POST'])
+def get_word_cloud():
+    if request.method == "POST":
+        text = request.json.get("word")
+        max_words = request.json.get("max_words")
+        width=request.json.get("width")
+        height=request.json.get("height")
+        print(text)
+        print(max_words)
+        pil_img = WordCloud(
+            max_words=max_words,
+            width=width,
+            stopwords=STOPWORDS,
+            height=height, 
+            background_color="white",colormap='inferno').generate(text=text).to_image()
+        img = io.BytesIO()
+        pil_img.save(img, "PNG")
+        img.seek(0)
+        img_base64 = base64.b64encode(img.getvalue()).decode()
+        return img_base64
+        
 
 @app.route('/')
 def root():
@@ -53,6 +82,7 @@ def remove_stopwords_spam(text):
 def spam():
     if request.method == "POST":
         json_data = json.loads(request.data)
+        print(json_data)
         # print(json_data["comments"])
         data = pd.DataFrame(json_data)
         data['clean_msg'] = data["comments"].apply(text_process)
@@ -106,6 +136,7 @@ def processed_data(text, stop_remove, more_remove, stem, lemme):
 
     text = (" ".join(text))  # joining of the text .
     return text
+
 
 
 def sentence_score(text):
