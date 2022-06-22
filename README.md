@@ -42,7 +42,11 @@ Colab Link : https://colab.research.google.com/drive/11-ZTT6o9waxcJ3wmNUEWyBNlal
 
 <br>
 
-Spam : https://secret-peak-13498.herokuapp.com/spam
+<details><summary>Spam  </summary>
+
+<br>
+
+https://secret-peak-13498.herokuapp.com/spam
 
 <br>
 
@@ -51,8 +55,12 @@ Spam : https://secret-peak-13498.herokuapp.com/spam
 ![](img/2022-06-22-17-48-32.png)
 
 <br>
+</details>
+<details><summary>Sentiment  </summary>
 
-Sentiment : https://secret-peak-13498.herokuapp.com/sentiment
+<br>
+
+https://secret-peak-13498.herokuapp.com/sentiment
 
 <br>
 
@@ -61,8 +69,12 @@ Sentiment : https://secret-peak-13498.herokuapp.com/sentiment
 ![](img/2022-06-22-17-49-12.png)
 
 <br>
+</details>
+<details><summary>Word Cloud  </summary>
 
-Word Cloud : https://secret-peak-13498.herokuapp.com/wordcloud
+<br>
+
+https://secret-peak-13498.herokuapp.com/wordcloud
 
 <br>
 
@@ -77,6 +89,8 @@ Word Cloud : https://secret-peak-13498.herokuapp.com/wordcloud
 
 ![](img/2022-06-22-17-51-06.png)
 
+<hr>
+
 Use this encoded output in image tag as `base64` string to create a word cloud.
 
     <img src="data:image/png;base64, {{ word_cloud_encoded_string_from_api }}" alt="word cloud">
@@ -84,3 +98,4 @@ Use this encoded output in image tag as `base64` string to create a word cloud.
 ![](img/2022-06-22-18-22-08.png)
 
 ![](img/2022-06-22-18-18-44.png)
+</details>
