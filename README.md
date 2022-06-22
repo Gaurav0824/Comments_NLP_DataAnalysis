@@ -8,7 +8,7 @@ Api Link : https://secret-peak-13498.herokuapp.com/
 
 <br>
 
-This is the backend api serving the website.
+This is the backend api serving the <a href = "#website">website</a>
 
 This api is used to perform the following tasks:
 
@@ -26,15 +26,17 @@ This api is used to perform the following tasks:
 
 <hr>
 
-The website built using this api can be found at
-
-Project Link : https://fastidious-taffy-09c112.netlify.app/
-
-Github Link :
+<div id="website"></div>
+        
+:computer: **WebSite** built using this api : https://fastidious-taffy-09c112.netlify.app/ 
 
 <hr>
 
-Colab Link : https://colab.research.google.com/drive/11-ZTT6o9waxcJ3wmNUEWyBNlalRs-gIq?usp=sharing
+:electron: **Github** Link :
+
+<hr>
+
+:orange_book: **Colab** Link : https://colab.research.google.com/drive/11-ZTT6o9waxcJ3wmNUEWyBNlalRs-gIq?usp=sharing
 
 <hr>
 
