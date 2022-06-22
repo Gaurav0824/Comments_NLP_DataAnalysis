@@ -4,7 +4,7 @@ Api Link : https://secret-peak-13498.herokuapp.com/
 
 `Modified Version` : https://github.com/Gaurav0824/Api-majorProject-server
 
-`Api Link` : https://protected-gorge-33386.herokuapp.com/
+`Modified Api Link` : https://protected-gorge-33386.herokuapp.com/
 
 <br>
 
