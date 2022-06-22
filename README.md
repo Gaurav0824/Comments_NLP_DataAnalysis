@@ -4,7 +4,7 @@ Api Link : https://secret-peak-13498.herokuapp.com/
 
 `Modified Version` : https://github.com/Gaurav0824/Api-majorProject-server
 
-`Api Link` : https://protected-gorge-33386.herokuapp.com/
+`Modified Api Link` : https://protected-gorge-33386.herokuapp.com/
 
 <br>
 
@@ -55,7 +55,9 @@ https://secret-peak-13498.herokuapp.com/spam
 ![](img/2022-06-22-17-48-32.png)
 
 <br>
+
 </details>
+
 <details><summary>Sentiment  </summary>
 
 <br>
@@ -69,7 +71,9 @@ https://secret-peak-13498.herokuapp.com/sentiment
 ![](img/2022-06-22-17-49-12.png)
 
 <br>
+
 </details>
+
 <details><summary>Word Cloud  </summary>
 
 <br>
@@ -98,4 +102,5 @@ Use this encoded output in image tag as `base64` string to create a word cloud.
 ![](img/2022-06-22-18-22-08.png)
 
 ![](img/2022-06-22-18-18-44.png)
+
 </details>
