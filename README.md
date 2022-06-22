@@ -95,7 +95,8 @@ https://secret-peak-13498.herokuapp.com/wordcloud
 
 <hr>
 
-Use this encoded output in image tag as `base64` string to create a word cloud.
+
+    Use this encoded output in image tag as `base64` string to create a word cloud.
 
     <img src="data:image/png;base64, {{ word_cloud_encoded_string_from_api }}" alt="word cloud">
 
