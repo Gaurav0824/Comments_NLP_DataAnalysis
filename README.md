@@ -36,7 +36,10 @@ This api is used to perform the following tasks:
 
 <hr>
 
-:orange_book: **Colab** Link : https://colab.research.google.com/drive/11-ZTT6o9waxcJ3wmNUEWyBNlalRs-gIq?usp=sharing
+:orange_book: **Colab** Link : 
+
+- Spam : https://colab.research.google.com/drive/11-ZTT6o9waxcJ3wmNUEWyBNlalRs-gIq?usp=sharing
+- Sentiments : https://colab.research.google.com/drive/1xW4B06L3B1TEqLOKPkx19o8Zzg8nwqkA?usp=sharing
 
 <hr>
 
