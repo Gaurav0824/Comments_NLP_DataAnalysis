@@ -32,7 +32,7 @@ This api is used to perform the following tasks:
 
 <hr>
 
-:electron: **Github** Link :
+:electron: **Github** Link : https://github.com/Gaurav0824/MajorProjectWebsite
 
 <hr>
 
