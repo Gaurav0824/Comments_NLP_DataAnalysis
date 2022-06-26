@@ -98,18 +98,22 @@ def spam():
         result = data["pred"].map({0: 'ham', 1: 'spam'}).to_list()
         return json.dumps(result)
 
-
+from nltk.corpus import stopwords
+import string
 def generate_stop():
-    from nltk.corpus import stopwords
-    import string
     stop = stopwords.words('english')
     punctuations = list(string.punctuation)
     stop = stop + punctuations
     return stop
 
 
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer
+ps = PorterStemmer()
+from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+
 def processed_data(text, stop_remove, more_remove, stem, lemme):
-    from nltk.tokenize import word_tokenize
     text = text.lower()  # first we convert the text into lower (case senstivite )
     text = word_tokenize(text)  # for splitting into words , as removing the stop words will be done in in words.
 
@@ -117,21 +121,16 @@ def processed_data(text, stop_remove, more_remove, stem, lemme):
         stop = generate_stop()  # by using generate function , we are combining both the stop words and puncations
         text = [w for w in text if not w in stop]  # we remove them by using this .
 
-    if (
-            more_remove == True):  # like some of the text has more special charcater like '',`` , these are not the part of stop .
+    if (more_remove == True):  # like some of the text has more special charcater like '',`` , these are not the part of stop .
         text = (" ".join(text))
         text = text.replace('``', " ")
         text = text.replace("''", " ")
         text = word_tokenize(text)
 
     if (stem == True):  # if u want the stemming of your data
-        from nltk.stem import PorterStemmer
-        ps = PorterStemmer()
         text = [ps.stem(w) for w in text]
 
     if (lemme == True):  # To lemmization of the data.
-        from nltk.stem import WordNetLemmatizer
-        lemmatizer = WordNetLemmatizer()
         text = [lemmatizer.lemmatize(w) for w in text]
 
     text = (" ".join(text))  # joining of the text .
@@ -139,8 +138,8 @@ def processed_data(text, stop_remove, more_remove, stem, lemme):
 
 
 
+sid = SentimentIntensityAnalyzer()  # making the object of the sentimentanalyser
 def sentence_score(text):
-    sid = SentimentIntensityAnalyzer()  # making the object of the sentimentanalyser
     sid_dict = sid.polarity_scores(text)  # getting the scores ductionary
     scores = sid_dict['compound']  # taking the compound scores
 
